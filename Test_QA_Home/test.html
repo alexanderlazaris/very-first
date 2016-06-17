@@ -4,20 +4,15 @@
   <Title>Sydney Lexus QA</Title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-  
   <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
   <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
   <script src="js/modernizr.js"></script> <!-- Modernizr -->
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/main.js"></script> <!-- Resource jQuery -->
-  
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <style>#slider { margin: 10px; background-color: white;}  </style>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  
   <script>
     console.log("Print message here");
     function alertMe()
@@ -26,6 +21,7 @@
     }
   </script>
   <style>
+    div{ margin: 10px; }
     table
     {
       border: 1px solid black;
@@ -54,6 +50,10 @@
       padding-bottom: 20px;
       width:200px;      
     }
+    .sliderText{ padding-left: 50%; padding-right: 50%; font-size: 10px;}
+    #slider { margin-right: 10%; margin-left: 10%; background-color: white;}
+    #intro { padding-left: 100px;  padding-right: 100px; margin-left: 50px; margin-right: 50px;}
+
 
   </style>
 </head>
@@ -64,17 +64,19 @@
   <marquee id="intro" >Welcome to the test environment. Use the links below for test pages and status. </marquee>
   <br>
 </div>
-<div id="slider">slider</div>
+<div id="slider">
+  <p class="sliderText">slider</p>
   <script>
 $( "#slider" ).slider();
   </script>
+</div>
 
 <div ondblclick="alertMe()">
   <table>
     <tr class="td1">
       <td>QA - For in-office testing of tickets</td>
       <td ><a href="http://qa.lexus.com.au/">http://qa.lexus.com.au/</a></td>
-      <td >OK</td>
+      <td>OK</td>
     </tr>
     <tr class="td2">
       <td>IE-INT - UAT client testing</td>
