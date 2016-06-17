@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <Title>Sydney Lexus QA</Title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <script src="bower_components/angular/angular.js"></script>
+  
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/main.js"></script> <!-- Resource jQuery -->
+  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <style>#slider { margin: 10px; background-color: white;}  </style>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <script>
+    console.log("Print message here");
+
+    //var temp = prompt("hjhf")
+    function alertMe()
+    {
+      alert(document.getElementById("intro").innerHTML);
+    }
+  </script>
+  <style>
+    table
+    {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .td1
+    {
+      background-color: #F4D03F;
+      color: black;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      width:200px;
+
+    }
+    
+    .td2
+    {
+      background-color: #ECECEC;
+      color: black;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      width:200px;      
+    }
+
+  </style>
+</head>
+
+<body>
+<div>
+  <br>
+  <marquee id="intro" >Welcome to the test environment. Use the links below for test pages and status. </marquee>
+  <br>
+</div>
+<div id="slider">slider</div>
+  <script>
+$( "#slider" ).slider();
+  </script>
+
+<div ondblclick="alertMe()">
+  <table>
+    <tr class="td1">
+      <td>QA - For in-office testing of tickets</td>
+      <td ><a href="http://qa.lexus.com.au/">http://qa.lexus.com.au/</a></td>
+      <td >OK</td>
+    </tr>
+    <tr class="td2">
+      <td>IE-INT - UAT client testing</td>
+      <td><a href="http://ie-int.lexus.com.au/">http://ie-int.lexus.com.au/</a></td>
+      <td>OK</td>
+    </tr>
+  </table>
+</div>
+
+
+<section class="cd-intro">
+    <h1 class="cd-headline rotate-1">
+      <span>Is QA working?</span>
+      <span class="cd-words-wrapper">
+        <b class="is-visible">Hopefully</b>
+        <b>Maybe</b>
+        <b>Nope</b>
+      </span>
+    </h1>
+  </section> <!-- cd-intro -->
+
+</body>
+</html>
