@@ -19,63 +19,40 @@
     {
       alert(document.getElementById("intro").innerHTML);
     }
+
+    function mouseOver()
+    {
+      document.getElementById("column1").style.backgroundColor = "red";
+    }
+
   </script>
   <style>
     div{ margin: 10px; }
-    table
-    {
-      border: 1px solid black;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    .td1
-    {
-      background-color: #F4D03F;
-      color: black;
-      padding-left: 20px;
-      padding-top: 20px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-      width:200px;
-
-    }
-    
-    .td2
-    {
-      background-color: #ECECEC;
-      color: black;
-      padding-left: 20px;
-      padding-top: 20px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-      width:200px;      
-    }
+    table{ border: 1px solid black; border-collapse: collapse; width: 100%; }
+    .td1{ background-color: #F4D03F; color: black; padding-left: 20px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; width:200px; }
+    .td2{ background-color: #ECECEC; color: black; padding-left: 20px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; width:200px; }
     .sliderText{ padding-left: 50%; padding-right: 50%; font-size: 10px;}
     #slider { margin-right: 10%; margin-left: 10%; background-color: white;}
     #intro { padding-left: 100px;  padding-right: 100px; margin-left: 50px; margin-right: 50px;}
-
-
   </style>
 </head>
 
 <body>
 <div>
   <br>
-  <marquee id="intro" >Welcome to the test environment. Use the links below for test pages and status. </marquee>
+  <marquee id="intro">Welcome to the test environment. Use the links below for test pages and status. </marquee>
   <br>
 </div>
 <div id="slider">
   <p class="sliderText">slider</p>
-  <script>
-$( "#slider" ).slider();
-  </script>
+  <script>$( "#slider" ).slider();</script>
 </div>
 
 <div ondblclick="alertMe()">
   <table>
     <tr class="td1">
-      <td>QA - For in-office testing of tickets</td>
-      <td ><a href="http://qa.lexus.com.au/">http://qa.lexus.com.au/</a></td>
+      <td id="column1" onmouseover="mouseOver()">QA - For in-office testing of tickets</td>
+      <td><a href="http://qa.lexus.com.au/">http://qa.lexus.com.au/</a></td>
       <td>OK</td>
     </tr>
     <tr class="td2">
@@ -91,9 +68,7 @@ $( "#slider" ).slider();
     <h1 class="cd-headline rotate-1">
       <span>Is QA working?</span>
       <span class="cd-words-wrapper">
-        <b class="is-visible">Hopefully</b>
-        <b>Maybe</b>
-        <b>Nope</b>
+        <b class="is-visible">Hopefully</b><b>Maybe</b><b>Nope</b>
       </span>
     </h1>
   </section> <!-- cd-intro -->
